@@ -4,7 +4,7 @@
 
 ---
 
-## 1. 🌟 Giới thiệu dự án (Introduction to the Project)
+## 1. Giới thiệu dự án (Introduction to the Project)
 
 Dự án nhằm xây dựng một **ứng dụng nhắn tin trên thiết bị di động** cho phép người dùng giao tiếp với nhau **theo thời gian thực**.
 
@@ -17,13 +17,13 @@ Dự án được thực hiện trong khuôn khổ học phần **Kiến trúc p
 
 ---
 
-## 2. 📌 Tóm tắt điều hành (Executive Summary)
+## 2. Tóm tắt điều hành (Executive Summary)
 
 Ứng dụng nhắn tin cho phép người dùng:
 
-* 🔑 Kết nối hệ thống bằng **tên người dùng duy nhất**
-* 💬 Gửi và nhận **tin nhắn văn bản theo thời gian thực**
-* 👥 Giao tiếp **đồng thời với nhiều người dùng**
+* Kết nối hệ thống bằng **tên người dùng duy nhất**
+* Gửi và nhận **tin nhắn văn bản theo thời gian thực**
+* Giao tiếp **đồng thời với nhiều người dùng**
 
 Hệ thống sử dụng kiến trúc **Client – Server**, trong đó **server được xây dựng theo mô hình Monolithic**.
 
@@ -39,23 +39,23 @@ Tất cả được tích hợp trong **một ứng dụng duy nhất**, giúp:
 
 ---
 
-## 3. 🎯 Yêu cầu & Mục tiêu dự án (Project Requirements & Goals)
+## 3. Yêu cầu & Mục tiêu dự án (Project Requirements & Goals)
 
-### 3.1 ✅ Yêu cầu chức năng
+### 3.1 Yêu cầu chức năng
 
 * Người dùng có thể kết nối đến server bằng **một tên người dùng duy nhất**
 * Gửi và nhận **tin nhắn văn bản**
 * Tin nhắn được truyền **theo thời gian thực**
 * Hỗ trợ **nhiều người dùng hoạt động đồng thời**
 
-### 3.2 ⚙️ Yêu cầu phi chức năng
+### 3.2 Yêu cầu phi chức năng
 
-* ⏱️ **Độ trễ thấp**: Tin nhắn được truyền gần như tức thời
-* 🔒 **Độ tin cậy**: Hệ thống hoạt động ổn định trong điều kiện bình thường
-* 🚀 **Dễ triển khai**: Phù hợp với nhóm phát triển nhỏ
-* 🧩 **Dễ bảo trì**: Cấu trúc đơn giản, dễ hiểu
+* **Độ trễ thấp**: Tin nhắn được truyền gần như tức thời
+* **Độ tin cậy**: Hệ thống hoạt động ổn định trong điều kiện bình thường
+* **Dễ triển khai**: Phù hợp với nhóm phát triển nhỏ
+* **Dễ bảo trì**: Cấu trúc đơn giản, dễ hiểu
 
-### 3.3 🥅 Mục tiêu
+### 3.3 Mục tiêu
 
 * Áp dụng **kiến trúc Monolithic** cho hệ thống thời gian thực
 * Đánh giá **ưu điểm và hạn chế** của kiến trúc Monolithic
@@ -63,11 +63,11 @@ Tất cả được tích hợp trong **một ứng dụng duy nhất**, giúp:
 
 ---
 
-## 4. 🏗️ Thiết kế & Triển khai kiến trúc
+## 4. Thiết kế & Triển khai kiến trúc
 
 *(Architectural Design & Implementation)*
 
-### 4.1 🔍 Tổng quan kiến trúc
+### 4.1 Tổng quan kiến trúc
 
 Hệ thống được thiết kế theo **Client – Server Architecture**, bao gồm:
 
@@ -88,7 +88,7 @@ Hệ thống được thiết kế theo **Client – Server Architecture**, bao 
 
 ---
 
-### 4.2 🧱 Sơ đồ kiến trúc Monolithic
+### 4.2 Sơ đồ kiến trúc Monolithic
 
 ```
 +------------------------------------------------------+
@@ -113,7 +113,7 @@ Hệ thống được thiết kế theo **Client – Server Architecture**, bao 
 +------------------------------------------------------+
 ```
 
-#### 👉 Giải thích kiến trúc
+#### Giải thích kiến trúc
 
 * Client giao tiếp **trực tiếp** với server
 * Server xử lý **toàn bộ chức năng** trong một khối thống nhất
@@ -121,7 +121,7 @@ Hệ thống được thiết kế theo **Client – Server Architecture**, bao 
 
 ---
 
-### 4.3 🧰 Công nghệ sử dụng
+### 4.3 Công nghệ sử dụng
 
 | Thành phần | Công nghệ                        |
 | ---------- | -------------------------------- |
@@ -132,7 +132,7 @@ Hệ thống được thiết kế theo **Client – Server Architecture**, bao 
 
 ---
 
-### 4.4 🤔 Lý do lựa chọn kiến trúc Monolithic
+### 4.4 Lý do lựa chọn kiến trúc Monolithic
 
 Kiến trúc **Monolithic** được lựa chọn vì:
 
@@ -143,15 +143,15 @@ Kiến trúc **Monolithic** được lựa chọn vì:
 
 ---
 
-## 5. 🧪 Kiểm thử & Đánh giá (Testing & Verification)
+## 5. Kiểm thử & Đánh giá (Testing & Verification)
 
-### 5.1 🔬 Chiến lược kiểm thử
+### 5.1 Chiến lược kiểm thử
 
 * **Unit Test**: Kiểm tra các hàm xử lý tin nhắn
 * **Integration Test**: Kiểm tra kết nối client – server
 * **Performance Test**: Đo độ trễ khi nhiều người dùng gửi tin nhắn đồng thời
 
-### 5.2 📊 Kết quả
+### 5.2 Kết quả
 
 * Tin nhắn được truyền **gần như tức thời**
 * Hệ thống hoạt động **ổn định với nhiều kết nối**
@@ -159,7 +159,7 @@ Kiến trúc **Monolithic** được lựa chọn vì:
 
 ---
 
-## 6. 📝 Kết luận & Nhận xét (Conclusion & Reflection)
+## 6. Kết luận & Nhận xét (Conclusion & Reflection)
 
 Dự án đã xây dựng thành công **ứng dụng nhắn tin thời gian thực trên thiết bị di động** dựa trên **kiến trúc Monolithic**.
 
@@ -170,7 +170,7 @@ Kiến trúc này phù hợp với:
 
 Đồng thời giúp nhóm hiểu rõ mối quan hệ giữa **quyết định kiến trúc** và **thuộc tính chất lượng** của hệ thống.
 
-### 🚀 Hướng phát triển trong tương lai
+### Hướng phát triển trong tương lai
 
 * Tách các module khi hệ thống mở rộng
 * Nâng cấp sang **Microservices** khi số lượng người dùng lớn
