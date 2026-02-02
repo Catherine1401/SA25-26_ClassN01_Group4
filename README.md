@@ -78,29 +78,29 @@ Hệ thống được thiết kế theo Client–Server Architecture, trong đó
 
 Tất cả các thành phần phía server được triển khai trong một ứng dụng duy nhất.
 
-###4.2 Sơ đồ kiến trúc Monolithic
+### 4.2 Sơ đồ kiến trúc Monolithic
 
-+-------------------+
-|   Mobile Client   |
-| (Android / Flutter|
-|  / React Native)  |
-+---------+---------+
-          |
-          | WebSocket / Socket.IO
-          v
-+------------------------------------+
-|        Monolithic Chat Server      |
-|------------------------------------|
-| - User Connection Management       |
-| - Message Handling Logic           |
-| - Real-time Event Processing       |
-| - (Optional) Data Access Layer     |
-+------------------+-----------------+
-                   |
-                   v
-          +-------------------+
-          | Database / Memory |
-          +-------------------+
++------------------------------------------------------+
+|                Mobile / Web Client                   |
+|   (Android / Flutter / React Native / Web Browser)   |
++------------------------------------------------------+
+                        |
+                        |  WebSocket / Socket.IO
+                        v
++------------------------------------------------------+
+|               Monolithic Chat Server                 |
+|------------------------------------------------------|
+| - User Connection Management                         |
+| - Message Handling Logic                             |
+| - Real-time Event Processing                         |
+| - (Optional) Data Access Layer                       |
++------------------------------------------------------+
+                        |
+                        v
++------------------------------------------------------+
+|                 Database / Memory                    |
++------------------------------------------------------+
+
 
 
 
