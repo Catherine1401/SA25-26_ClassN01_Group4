@@ -1,85 +1,84 @@
-📱 Ứng dụng Nhắn Tin Trên Thiết Bị Di Động
+#📱 Ứng dụng Nhắn Tin Trên Thiết Bị Di Động
 
 (Monolithic Architecture)
 
-1. Giới thiệu dự án (Introduction to the Project)
+##1. Giới thiệu dự án (Introduction to the Project)
 
 Dự án nhằm xây dựng một ứng dụng nhắn tin trên thiết bị di động cho phép người dùng giao tiếp với nhau theo thời gian thực.
 Hệ thống được thiết kế theo kiến trúc Monolithic, trong đó toàn bộ các chức năng được triển khai trong một khối ứng dụng thống nhất.
 
 Dự án được thực hiện trong khuôn khổ học phần Kiến trúc phần mềm, tập trung vào việc phân tích quyết định kiến trúc và đánh giá các thuộc tính chất lượng của hệ thống.
 
-2. Tóm tắt điều hành (Executive Summary)
+##2. Tóm tắt điều hành (Executive Summary)
 
 Ứng dụng nhắn tin cho phép người dùng:
 
-Kết nối hệ thống bằng tên người dùng duy nhất
+- Kết nối hệ thống bằng tên người dùng duy nhất
 
-Gửi và nhận tin nhắn văn bản theo thời gian thực
+- Gửi và nhận tin nhắn văn bản theo thời gian thực
 
-Giao tiếp đồng thời với nhiều người dùng
+- Giao tiếp đồng thời với nhiều người dùng
 
 Hệ thống sử dụng kiến trúc Client–Server, trong đó server được xây dựng theo mô hình Monolithic.
 Toàn bộ logic xử lý (kết nối, quản lý người dùng, xử lý và phân phối tin nhắn) được tích hợp trong một ứng dụng duy nhất, giúp đơn giản hóa triển khai và phát triển trong giai đoạn đầu.
 
-3. Yêu cầu & Mục tiêu dự án (Project Requirements & Goals)
-3.1 Yêu cầu chức năng
+##3. Yêu cầu & Mục tiêu dự án (Project Requirements & Goals)
 
-Người dùng có thể kết nối đến server bằng một tên người dùng duy nhất
+###3.1 Yêu cầu chức năng
 
-Gửi và nhận tin nhắn văn bản
+- Người dùng có thể kết nối đến server bằng một tên người dùng duy nhất
 
-Tin nhắn được truyền theo thời gian thực
+- Gửi và nhận tin nhắn văn bản
 
-Hỗ trợ nhiều người dùng hoạt động đồng thời
+- Tin nhắn được truyền theo thời gian thực
 
-3.2 Yêu cầu phi chức năng
+- Hỗ trợ nhiều người dùng hoạt động đồng thời
 
-Độ trễ thấp: Tin nhắn được truyền gần như tức thời
+###3.2 Yêu cầu phi chức năng
 
-Độ tin cậy: Hệ thống hoạt động ổn định trong điều kiện bình thường
+- Độ trễ thấp: Tin nhắn được truyền gần như tức thời
 
-Dễ triển khai: Phù hợp với nhóm phát triển nhỏ
+- Độ tin cậy: Hệ thống hoạt động ổn định trong điều kiện bình thường
 
-Dễ bảo trì: Cấu trúc đơn giản, dễ hiểu
+- Dễ triển khai: Phù hợp với nhóm phát triển nhỏ
 
-3.3 Mục tiêu
+- Dễ bảo trì: Cấu trúc đơn giản, dễ hiểu
 
-Áp dụng kiến trúc Monolithic cho một hệ thống thời gian thực
+###3.3 Mục tiêu
 
-Đánh giá ưu và nhược điểm của kiến trúc Monolithic
+- Áp dụng kiến trúc Monolithic cho một hệ thống thời gian thực
 
-Đáp ứng các thuộc tính chất lượng quan trọng của hệ thống nhắn tin
+- Đánh giá ưu và nhược điểm của kiến trúc Monolithic
 
-4. Thiết kế & Triển khai kiến trúc
+- Đáp ứng các thuộc tính chất lượng quan trọng của hệ thống nhắn tin
+
+##4. Thiết kế & Triển khai kiến trúc
 
 (Architectural Design & Implementation)
 
-4.1 Tổng quan kiến trúc
+###4.1 Tổng quan kiến trúc
 
 Hệ thống được thiết kế theo Client–Server Architecture, trong đó:
 
-Mobile Client
+- Mobile Client
 
-Hiển thị giao diện người dùng
+- Hiển thị giao diện người dùng
 
-Gửi và nhận tin nhắn
+- Gửi và nhận tin nhắn
 
-Monolithic Server
+- Monolithic Server
 
-Quản lý kết nối người dùng
+- Quản lý kết nối người dùng
 
-Xử lý logic nghiệp vụ
+- Xử lý logic nghiệp vụ
 
-Phân phối tin nhắn theo thời gian thực
+- Phân phối tin nhắn theo thời gian thực
 
 (Tùy chọn) Lưu trữ dữ liệu
 
 Tất cả các thành phần phía server được triển khai trong một ứng dụng duy nhất.
 
-4.2 Sơ đồ kiến trúc Monolithic
-
-📌 Sơ đồ này bạn dán thẳng vào README.md hoặc báo cáo
+###4.2 Sơ đồ kiến trúc Monolithic
 
 +-------------------+
 |   Mobile Client   |
@@ -104,62 +103,63 @@ Tất cả các thành phần phía server được triển khai trong một ứ
           +-------------------+
 
 
+
 👉 Giải thích kiến trúc:
 
-Client giao tiếp trực tiếp với server
+- Client giao tiếp trực tiếp với server
 
-Server xử lý toàn bộ chức năng trong một khối thống nhất
+- Server xử lý toàn bộ chức năng trong một khối thống nhất
 
-Giao tiếp thời gian thực thông qua WebSocket/Socket.IO
+- Giao tiếp thời gian thực thông qua WebSocket/Socket.IO
 
-4.3 Công nghệ sử dụng
+###4.3 Công nghệ sử dụng
 
-Client: Android / Flutter / React Native
+- Client: Android / Flutter / React Native
 
-Server: Node.js (Monolithic Application)
+- Server: Node.js (Monolithic Application)
 
-Giao tiếp: Socket.IO (WebSocket)
+- Giao tiếp: Socket.IO (WebSocket)
 
-Lưu trữ: In-memory / Database (mở rộng)
+- Lưu trữ: In-memory / Database (mở rộng)
 
-4.4 Lý do lựa chọn kiến trúc Monolithic
+###4.4 Lý do lựa chọn kiến trúc Monolithic
 
 Kiến trúc Monolithic được lựa chọn vì:
 
-Phù hợp với quy mô dự án nhỏ – trung bình
+- Phù hợp với quy mô dự án nhỏ – trung bình
 
-Dễ phát triển và triển khai
+- Dễ phát triển và triển khai
 
-Giảm độ phức tạp trong thiết kế kiến trúc
+- Giảm độ phức tạp trong thiết kế kiến trúc
 
-Thuận lợi cho việc học và phân tích kiến trúc hệ thống
+- Thuận lợi cho việc học và phân tích kiến trúc hệ thống
 
-5. Kiểm thử & Đánh giá (Testing & Verification)
-5.1 Chiến lược kiểm thử
+##5. Kiểm thử & Đánh giá (Testing & Verification)
+###5.1 Chiến lược kiểm thử
 
-Unit Test: Kiểm tra các hàm xử lý tin nhắn
+- Unit Test: Kiểm tra các hàm xử lý tin nhắn
 
-Integration Test: Kiểm tra kết nối client–server
+- Integration Test: Kiểm tra kết nối client–server
 
-Test hiệu năng: Đo độ trễ khi nhiều người dùng gửi tin nhắn đồng thời
+- Test hiệu năng: Đo độ trễ khi nhiều người dùng gửi tin nhắn đồng thời
 
-5.2 Kết quả
+###5.2 Kết quả
 
-Tin nhắn được truyền gần như tức thời
+- Tin nhắn được truyền gần như tức thời
 
-Hệ thống hoạt động ổn định với nhiều kết nối
+- Hệ thống hoạt động ổn định với nhiều kết nối
 
-Kiến trúc Monolithic đáp ứng tốt yêu cầu hiện tại của dự án
+- Kiến trúc Monolithic đáp ứng tốt yêu cầu hiện tại của dự án
 
-6. Kết luận & Nhận xét (Conclusion & Reflection)
+##6. Kết luận & Nhận xét (Conclusion & Reflection)
 
 Dự án đã xây dựng thành công một ứng dụng nhắn tin thời gian thực trên thiết bị di động dựa trên kiến trúc Monolithic.
 Kiến trúc này phù hợp với mục tiêu học tập và quy mô dự án, đồng thời giúp nhóm hiểu rõ mối liên hệ giữa quyết định kiến trúc và các thuộc tính chất lượng của hệ thống.
 
 Hướng phát triển trong tương lai:
 
-Tách các module nếu hệ thống mở rộng
+- Tách các module nếu hệ thống mở rộng
 
-Nâng cấp sang Microservices khi số lượng người dùng lớn
+- Nâng cấp sang Microservices khi số lượng người dùng lớn
 
-Bổ sung chat nhóm và gửi đa phương tiện
+- Bổ sung chat nhóm và gửi đa phương tiện
