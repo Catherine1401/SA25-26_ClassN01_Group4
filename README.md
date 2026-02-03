@@ -126,7 +126,7 @@ Hệ thống được thiết kế theo **Client – Server Architecture**, bao 
 | Thành phần | Công nghệ                        |
 | ---------- | -------------------------------- |
 | Client     | Android / Flutter / React Native |
-| Server     | Node.js (Monolithic Application) |
+| Server     | Supabase (Monolithic Application) |
 | Giao tiếp  | Socket.IO (WebSocket)            |
 | Lưu trữ    | In-memory / Database (mở rộng)   |
 
